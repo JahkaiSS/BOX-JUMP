@@ -168,9 +168,12 @@ def main():
         title_text = font.render("BOX JUMP GAME",False,"white",'gray')
         screen.blit(title_text,(150,50))
         
+        
 
         pygame.draw.rect(screen,player_color,box,0)
         pygame.draw.rect(screen,'yellow',floor,0)
+        controls_text = font2.render("'Spacebar to JUMP'",False,'black')
+        screen.blit(controls_text,[100,450])
         if jumped_over_count < 5:
             pygame.draw.polygon(screen,'black',[(v1,400),(v2,400),(v3,350)],0)
             if box.collidepoint(v1,395):
